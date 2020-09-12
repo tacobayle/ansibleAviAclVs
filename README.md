@@ -58,12 +58,12 @@ avisdk 18.2.9
 ```
 git clone https://github.com/tacobayle/ansibleAviAclVs
 ```
-- initialize the variables (vars/creds.json and vars/datas.yml)
+- initialize the variables (vars/datas.yml)
 - to create the ACL and apply it:
 ```
-ansible-playbook pbAviAclVs.yml --extra-vars @creds.json
+ansible-playbook pbAviAclVs.yml --extra-vars @pathto/creds.json
 ```
 - to disable the ACL:
 ```
-ansible-playbook pbAviVs.yml --extra-vars @creds.json --extra-var state=disable
+ansible-playbook pbAviVs.yml --extra-vars @pathto/creds.json --extra-var state=disable
 ```

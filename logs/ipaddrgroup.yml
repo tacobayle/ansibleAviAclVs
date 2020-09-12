@@ -1,0 +1,13 @@
+---
+count: 1
+results:
+- url: https://192.168.142.135/api/ipaddrgroup/ipaddrgroup-3d11a60d-4a95-418d-a91e-359f500455fb
+  uuid: ipaddrgroup-3d11a60d-4a95-418d-a91e-359f500455fb
+  name: acl-deny
+  tenant_ref: https://192.168.142.135/api/tenant/admin
+  _last_modified: '1599836722836064'
+  prefixes:
+  - ip_addr:
+      addr: 10.1.2.0
+      type: V4
+    mask: 24

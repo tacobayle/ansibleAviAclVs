@@ -1,0 +1,18 @@
+---
+url: https://192.168.142.135/api/networksecuritypolicy/networksecuritypolicy-6720c92a-9a27-4ec5-8707-88d01cea5564
+uuid: networksecuritypolicy-6720c92a-9a27-4ec5-8707-88d01cea5564
+name: vs-app2-Default-Cloud-ns
+tenant_ref: https://192.168.142.135/api/tenant/admin
+_last_modified: '1599837980347222'
+rules:
+- name: Rule 1
+  index: 1
+  enable: true
+  match:
+    client_ip:
+      match_criteria: IS_IN
+      group_refs:
+      - https://192.168.142.135/api/ipaddrgroup/ipaddrgroup-f5fd10a1-a643-4606-96ec-88c5cbdeded3
+  action: NETWORK_SECURITY_POLICY_ACTION_TYPE_DENY
+  log: false
+  age: 0

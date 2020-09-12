@@ -1,0 +1,19 @@
+---
+avi_ipaddrgroup:
+  - name: acl-deny
+    prefixes:
+      - ip_addr:
+          addr: 10.1.2.0
+          type: V4
+        mask: 24
+      - ip_addr:
+          addr: 10.1.3.0
+          type: V4
+        mask: 24
+      - ip_addr:
+          addr: 10.1.4.0
+          type: V4
+        mask: 24
+
+vsExclusionList:
+  - app3

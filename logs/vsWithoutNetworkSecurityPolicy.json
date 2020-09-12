@@ -1,0 +1,162 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "_last_modified": "1599890174147359",
+      "active_standby_se_tag": "ACTIVE_STANDBY_SE_1",
+      "advertise_down_vs": false,
+      "allow_invalid_client_cert": false,
+      "analytics_policy": {
+        "all_headers": false,
+        "client_insights": "PASSIVE",
+        "full_client_logs": {
+          "duration": 0,
+          "enabled": true,
+          "throttle": 10
+        },
+        "metrics_realtime_update": {
+          "duration": 0,
+          "enabled": true
+        },
+        "significant_log_throttle": 10,
+        "udf_log_throttle": 10
+      },
+      "analytics_profile_ref": "https://192.168.142.135/api/analyticsprofile/analyticsprofile-e69a8799-d047-407a-9ede-f2a1b9194abf",
+      "application_profile_ref": "https://192.168.142.135/api/applicationprofile/applicationprofile-509ddc89-8dfb-4445-9f8b-4d3db93fc517",
+      "bulk_sync_kvcache": false,
+      "close_client_conn_on_config_update": false,
+      "cloud_ref": "https://192.168.142.135/api/cloud/cloud-59c1f31c-876e-4576-b96f-4abe6d595cc8",
+      "cloud_type": "CLOUD_LINUXSERVER",
+      "delay_fairness": false,
+      "east_west_placement": false,
+      "enable_autogw": true,
+      "enable_rhi": false,
+      "enabled": true,
+      "flow_dist": "LOAD_AWARE",
+      "flow_label_type": "NO_LABEL",
+      "http_policies": [
+        {
+          "http_policy_set_ref": "https://192.168.142.135/api/httppolicyset/httppolicyset-92a5b2c5-59fc-47dc-90e9-351063993b99",
+          "index": 11
+        }
+      ],
+      "ign_pool_net_reach": false,
+      "limit_doser": false,
+      "marked_for_delete": false,
+      "max_cps_per_client": 0,
+      "name": "app2",
+      "network_profile_ref": "https://192.168.142.135/api/networkprofile/networkprofile-28a0cd71-fe12-4943-ae47-dc9226003f67",
+      "network_security_policy_ref": "https://192.168.142.135/api/networksecuritypolicy/networksecuritypolicy-41087e9f-d667-4b2f-8174-c6c86df6c45a",
+      "pool_ref": "https://192.168.142.135/api/pool/pool-5356666b-ec91-4bf1-9442-996a51b290a6",
+      "redis_db": 0,
+      "redis_port": 5026,
+      "remove_listening_port_on_vs_down": false,
+      "scaleout_ecmp": false,
+      "se_group_ref": "https://192.168.142.135/api/serviceenginegroup/serviceenginegroup-bad910fd-8cc0-4fa8-ad3c-b5b3af203d1b",
+      "self_se_election": true,
+      "services": [
+        {
+          "enable_http2": false,
+          "enable_ssl": false,
+          "port": 80,
+          "port_range_end": 80
+        },
+        {
+          "enable_http2": false,
+          "enable_ssl": true,
+          "port": 443,
+          "port_range_end": 443
+        }
+      ],
+      "ssl_key_and_certificate_refs": [
+        "https://192.168.142.135/api/sslkeyandcertificate/sslkeyandcertificate-a8282c65-2ccd-4cad-810b-4adafa9944cd"
+      ],
+      "ssl_profile_ref": "https://192.168.142.135/api/sslprofile/sslprofile-dda04db9-82e6-42b5-8adf-9887213f13b4",
+      "ssl_sess_cache_avg_size": 1024,
+      "tenant_ref": "https://192.168.142.135/api/tenant/admin",
+      "tls_ticket_key": [
+        {
+          "aes_key": "6/RdAzPpLwCTQ/iTOBu45w==",
+          "hmac_key": "jRRy9j69Rn0qdmM0qUndiA==",
+          "name": "8cf79e2e-3e04-4eb9-a06f-3d09bf17ce31"
+        },
+        {
+          "aes_key": "cgZ50oMXDQq8ESz6P3+eeA==",
+          "hmac_key": "Irc699bCs4cdDcEkM99kTA==",
+          "name": "b80c630f-959e-4db3-b776-ab6e57c3e46a"
+        },
+        {
+          "aes_key": "uF4RIBnIPCTRFD4DUJUyCg==",
+          "hmac_key": "a97jKVmIixTKhC1aTbGGuw==",
+          "name": "dad1d9a6-d156-42b9-8688-0f3f812ffd95"
+        }
+      ],
+      "traffic_enabled": true,
+      "type": "VS_TYPE_NORMAL",
+      "url": "https://192.168.142.135/api/virtualservice/virtualservice-b7756b9f-fc9a-4412-9b91-6c2bc893ac80",
+      "use_bridge_ip_as_vip": false,
+      "use_vip_as_snat": false,
+      "uuid": "virtualservice-b7756b9f-fc9a-4412-9b91-6c2bc893ac80",
+      "version": "5",
+      "vip_runtime": [
+        {
+          "first_se_assigned_time": {
+            "secs": "1597337433",
+            "usecs": "305699"
+          },
+          "num_additional_se": 0,
+          "requested_resource": {
+            "num_se": 1,
+            "num_standby_se": 0
+          },
+          "se_list": [
+            {
+              "admin_down_requested": false,
+              "attach_ip_status": "Programming Network reachability to the Virtual Service IP in the Cloud",
+              "attach_ip_success": true,
+              "delete_in_progress": false,
+              "incarnation": "2020-0813 16:50:33.319983",
+              "is_portchannel": false,
+              "is_primary": true,
+              "is_standby": false,
+              "memory": 1024,
+              "scaleout_in_progress": false,
+              "se_ref": "https://192.168.142.135/api/serviceengine/se-192.168.142.129-avitag-1",
+              "sec_idx": 0,
+              "vcpus": 1,
+              "vip6_subnet_mask": 128,
+              "vip_intf_list": [
+                {
+                  "is_portchannel": false,
+                  "vip_intf_ip": {
+                    "addr": "10.1.2.11",
+                    "type": "V4"
+                  },
+                  "vip_intf_mac": "00:0c:29:63:1f:8e",
+                  "vlan_id": 0
+                }
+              ],
+              "vip_intf_mac": "00:0c:29:63:1f:8e",
+              "vip_subnet_mask": 32,
+              "vlan_id": 0,
+              "vnic": [
+                {
+                  "mac": "00:0c:29:63:1f:8e",
+                  "type": "VNIC_TYPE_FE"
+                },
+                {
+                  "mac": "00:0c:29:63:1f:8e",
+                  "type": "VNIC_TYPE_BE"
+                }
+              ]
+            }
+          ],
+          "vip_id": "0"
+        }
+      ],
+      "vrf_context_ref": "https://192.168.142.135/api/vrfcontext/vrfcontext-3b8c947e-1b75-4158-a914-6f4873f071d3",
+      "vsvip_ref": "https://192.168.142.135/api/vsvip/vsvip-11c7ddb0-f797-43e4-b313-0b1dbb48a740",
+      "weight": 1
+    }
+  ]
+}

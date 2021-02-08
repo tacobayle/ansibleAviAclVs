@@ -3,17 +3,13 @@ avi_ipaddrgroup:
   - name: acl-deny
     prefixes:
       - ip_addr:
-          addr: 10.1.2.0
+          addr: 10.41.135.13
           type: V4
-        mask: 24
-      - ip_addr:
-          addr: 10.1.3.0
-          type: V4
-        mask: 24
-      - ip_addr:
-          addr: 10.1.4.0
-          type: V4
-        mask: 24
+        mask: 32
 
 vsExclusionList:
-  - app3
+  - cluster1--default-web1
+  - cluster1--default-web2
+  - cluster1--default-web3
+  - cluster1--Shared-L7-1
+  - cluster1--tls.vmw.avidemo.fr

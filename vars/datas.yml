@@ -3,13 +3,12 @@ avi_ipaddrgroup:
   - name: acl-deny
     prefixes:
       - ip_addr:
-          addr: 100.64.131.10
+          addr: 100.64.131.26
           type: V4
         mask: 32
 
 vsExclusionList:
-  - cluster1--default-web1
-  - cluster1--default-web2
-  - cluster1--default-web3
-  - cluster1--Shared-L7-1
-  - cluster1--tls.vmw.avidemo.fr
+  - app5-dns
+  - app6-gslb
+  - app7
+  - app8-dns

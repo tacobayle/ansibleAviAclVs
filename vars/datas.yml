@@ -8,6 +8,8 @@ avi_ipaddrgroup:
         mask: 32
 
 vsExclusionList:
+  - app3-content-switching
+  - app4-se-cpu-auto-scale
   - app5-dns
   - app6-gslb
   - app7

@@ -6,7 +6,7 @@ Configure an ACL and apply it to all the VS except those listed in the exception
 ## Prerequisites:
 1. Make sure pip install avisdk is installed:
 ```
-pip install avisdk==18.2.9
+pip install avisdk==21.1.1
 sudo -u ubuntu ansible-galaxy install -f avinetworks.avisdk
 ```
 3. Make sure your Avi Controller is reachable from your ansible host
@@ -17,25 +17,19 @@ sudo -u ubuntu ansible-galaxy install -f avinetworks.avisdk
 ### Ansible version
 
 ```
-nic@jumphp:~/ansible/aviAclVs$ ansible --version
-ansible 2.9.12
+ansible 2.10.13
   config file = None
-  configured module search path = ['/home/nic/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
-  ansible python module location = /home/nic/.local/lib/python3.8/site-packages/ansible
-  executable location = /home/nic/.local/bin/ansible
-  python version = 3.8.2 (default, Jul 16 2020, 14:00:26) [GCC 9.3.0]
-nic@jumphp:~/ansible/aviAclVs$
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ubuntu/.local/lib/python3.8/site-packages/ansible
+  executable location = /home/ubuntu/.local/bin/ansible
+  python version = 3.8.10 (default, Jun  2 2021, 10:49:15) [GCC 9.4.0]
 ```
 
 ### Avi version
 
 ```
-Avi 20.1.1
-avisdk 18.2.9
+Avi 21.1.1
 ```
-
-### Avi Environment
-- LSC Cloud
 
 ## Input/Parameters:
 

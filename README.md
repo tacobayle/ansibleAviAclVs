@@ -4,31 +4,58 @@
 Configure an ACL and apply it to all the VS except those listed in the exception list
 
 ## Prerequisites:
-1. Make sure pip install avisdk is installed:
+- The following python packages are installed:
 ```
-pip install avisdk==21.1.1
-sudo -u ubuntu ansible-galaxy install -f avinetworks.avisdk
+sudo apt install -y python3-pip
+sudo apt install -y python3-jmespath
+pip3 install --upgrade pip
+pip3 install ansible-core==2.12.5
+pip3 install ansible==5.7.1
+pip3 install avisdk
+sudo -u ubuntu ansible-galaxy collection install vmware.alb
+pip3 install dnspython
+pip3 install netaddr
 ```
-3. Make sure your Avi Controller is reachable from your ansible host
-4. Make sure you have an IPAM/DNS profile configured
+- Avi Controller API is reachable (HTTP 443) from your ansible host
 
 ## Environment:
+
+### OS version:
+
+```
+NAME="Ubuntu"
+VERSION="20.04.3 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.3 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+```
 
 ### Ansible version
 
 ```
-ansible 2.10.13
-  config file = None
+ansible [core 2.12.5]
+  config file = /etc/ansible/ansible.cfg
   configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
-  ansible python module location = /home/ubuntu/.local/lib/python3.8/site-packages/ansible
-  executable location = /home/ubuntu/.local/bin/ansible
-  python version = 3.8.10 (default, Jun  2 2021, 10:49:15) [GCC 9.4.0]
+  ansible python module location = /usr/local/lib/python3.8/dist-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible
+  python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
+  jinja version = 2.10.1
+  libyaml = True
 ```
+
 
 ### Avi version
 
 ```
-Avi 21.1.1
+Avi 22.1.1
 ```
 
 ## Input/Parameters:
@@ -38,11 +65,11 @@ Avi 21.1.1
 {"avi_credentials": {"username": "ansible", "controller": "*****", "password": "*****", "api_version": "*****"}}
 ```
 
-- All the other paramaters/variables are stored in vars/datas.yml
+- All the other variables are stored in vars/datas.yml
 
 
 
-## Use the the ansible playbook to:
+## Use the ansible playbook to:
 - Create an ACL
 - Apply this ACL to all the VS (through Network Security Group)
 - add --extra-var state=absent to disable the ACL (through Network Security Group)

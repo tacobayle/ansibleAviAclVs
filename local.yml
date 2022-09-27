@@ -64,7 +64,7 @@
         msg: "{{ avi_api_context }}"
 
 
-    - name: Create a network security policy (to block clients represented by ip group) for each VS (except for vs in the exclusion list)
+    - name: Create a network security policy (to block clients represented by ip group) for each parent VS (except for vs in the exclusion list)
       community.network.avi_networksecuritypolicy:
         avi_credentials: "{{ avi_credentials | default(omit) }}"
         api_context: "{{ avi_api_context | default(omit) }}"
@@ -90,6 +90,7 @@
         - avi_ipaddrgroup is defined
         - state is not defined
         - item.name not in vsExclusionList
+        - item.type == "VS_TYPE_VH_PARENT"
       tags:
         - ipAddressGroup
         - security
@@ -106,7 +107,7 @@
     #     - avi_ipaddrgroup is defined
     #     - state is not defined
 
-    - name: Update VS with network_security_policy_ref (except for vs in the exclusion list)
+    - name: Update VS with network_security_policy_ref for each parent VS (except for vs in the exclusion list)
       community.network.avi_virtualservice:
         avi_credentials: "{{ avi_credentials | default(omit) }}"
         api_context: "{{ avi_api_context | default(omit) }}"
@@ -121,6 +122,7 @@
         label: "Updating VS {{ item.0.name }} with network security policy"
       when:
         - item.0.name not in vsExclusionList
+        - item.0.type == "VS_TYPE_VH_PARENT"
         - state is not defined
       tags:
         - ipAddressGroup

@@ -3,14 +3,18 @@ avi_ipaddrgroup:
   - name: acl-deny
     prefixes:
       - ip_addr:
-          addr: 10.41.135.150
+          addr: 100.64.131.11
           type: V4
         mask: 32
 
 vsExclusionList:
-  - app3-content-switching
-  - app4-se-cpu-auto-scale
-  - app5-dns
-  - app6-gslb
-  - app7
-  - app8-dns
+  - app-vmw-dns
+  - app-analytics
+  - app-content-switching
+  - app-lsc
+  - app-lsc-dns
+  - app-se-cpu-auto-scale
+  - app-security
+  - app-vmw-gslb
+  - app-waf
+  - vs-app-migration

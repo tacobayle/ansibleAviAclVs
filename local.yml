@@ -41,6 +41,8 @@
       debug:
         msg: "{{ avi_api_context }}"
 
+
+
     - name: Create an ip group
       vmware.alb.avi_ipaddrgroup:
         avi_credentials: "{{ avi_credentials | default(omit) }}"
@@ -90,7 +92,6 @@
         - avi_ipaddrgroup is defined
         - state is not defined
         - item.name not in vsExclusionList
-        - item.type == "VS_TYPE_VH_PARENT"
       tags:
         - ipAddressGroup
         - security
@@ -122,7 +123,6 @@
         label: "Updating VS {{ item.0.name }} with network security policy"
       when:
         - item.0.name not in vsExclusionList
-        - item.0.type == "VS_TYPE_VH_PARENT"
         - state is not defined
       tags:
         - ipAddressGroup

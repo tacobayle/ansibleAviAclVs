@@ -1,6 +1,6 @@
 ---
 avi_ipaddrgroup:
-  - name: acl-deny
+  - name: acl-deny-demo-workshop
     prefixes:
       - ip_addr:
           addr: 100.64.131.11

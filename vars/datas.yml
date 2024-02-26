@@ -7,14 +7,10 @@ avi_ipaddrgroup:
           type: V4
         mask: 32
 
+
+avi_networksecuritypolicy:
+  - name: security-group-demo-workshop
+    avi_ipaddrgroup_ref: acl-deny-demo-workshop
+
 vsExclusionList:
   - app-vmw-dns
-  - app-analytics
-  - app-content-switching
-  - app-lsc
-  - app-lsc-dns
-  - app-se-cpu-auto-scale
-  - app-security
-  - app-vmw-gslb
-  - app-waf
-  - vs-app-migration

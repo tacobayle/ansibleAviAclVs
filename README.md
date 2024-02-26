@@ -55,7 +55,7 @@ ansible [core 2.12.5]
 ### Avi version
 
 ```
-Avi 22.1.1
+Avi 22.1.5
 ```
 
 ## Input/Parameters:
@@ -86,5 +86,5 @@ ansible-playbook local.yml --extra-vars @pathto/creds.json
 ```
 - to disable the ACL:
 ```
-ansible-playbook local.yml --extra-vars @pathto/creds.json --extra-var state=disable
+ansible-playbook local.yml --extra-vars @pathto/creds.json --extra-var state=delete
 ```

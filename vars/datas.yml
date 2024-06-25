@@ -3,7 +3,7 @@ avi_ipaddrgroup:
   - name: acl-deny-demo-workshop
     prefixes:
       - ip_addr:
-          addr: 100.64.131.11
+          addr: 100.64.133.11
           type: V4
         mask: 32
 
